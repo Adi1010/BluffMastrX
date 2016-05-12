@@ -1,2 +1,2 @@
 # BluffMastrX
-This is cross Platform version of https://github.com/srikantviswanath/BluffMastr using Xamarin Forms
+This is a cross platform version of https://github.com/srikantviswanath/BluffMastr using Xamarin Forms
