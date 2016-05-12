@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BluffMastrX.Staging">
+	<ContentPage.Content>
+		<StackLayout Padding="10,20,10,10">
+	        <Label Text = "BluffMastr" HorizontalOptions = "CenterAndExpand"></Label>
+			<Frame HorizontalOptions="Center" WidthRequest="300" HeightRequest="250" VerticalOptions= "Center" >
+				<StackLayout HorizontalOptions="CenterAndExpand" >
+					<Label Text = "Share the following code with other players" FontSize="Small" HorizontalOptions="Center" ></Label> 
+					<Label Text = "PDF2U" FontAttributes="Italic" HorizontalOptions="Center" ></Label>
+				</StackLayout>
+			</Frame>
+			<TableView Intent="Form" BackgroundColor="White" >
+				<TableSection>
+						
+				</TableSection>
+			</TableView>
+			<StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+					<Button Text = "Leave Game" WidthRequest="100" TextColor="White" Clicked="LeaveGame"  BackgroundColor="Gray" ></Button>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

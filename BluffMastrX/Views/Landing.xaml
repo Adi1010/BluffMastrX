@@ -4,8 +4,8 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 x:Class="BluffMastrX.Landing">
 	<ContentPage.Content>
-	   <StackLayout Padding="10,20,0,0">
-	        <Label Text = "BluffMastr" HorizontalOptions = "Center"></Label>
+	   <StackLayout Padding="10,20,10,10">
+	        <Label Text = "BluffMastr" HorizontalOptions = "CenterAndExpand"></Label>
 			<Frame HorizontalOptions="Center" WidthRequest="300" HeightRequest="250" VerticalOptions= "Center" >
 				<StackLayout Padding="20" HorizontalOptions="CenterAndExpand" >
 					<Button Text = "Create Game" WidthRequest="100" TextColor="White" Clicked="NewGame"  BackgroundColor= "#43CD80"></Button>

@@ -14,14 +14,18 @@ namespace BluffMastrX
 
 		void NewGame(object sender, EventArgs e)
 		{
-			if(string.IsNullOrEmpty(ScreeNameField.Text))
-				DisplayAlert(Constants.ERR_SCREENNAME_MISSING_TITLE, Constants.ERR_SCREENNAME_MISSIN_MSG, "OK");
+			if (string.IsNullOrEmpty (ScreeNameField.Text))
+				DisplayAlert (Constants.ERR_SCREENNAME_MISSING_TITLE, Constants.ERR_SCREENNAME_MISSIN_MSG, "OK");
+			else
+				Navigation.PushModalAsync(new Staging ());
 		}
 
 		void JoinGame(object sender, EventArgs e)
 		{
 			if(string.IsNullOrEmpty(ScreeNameField.Text))
 				DisplayAlert(Constants.ERR_SCREENNAME_MISSING_TITLE, Constants.ERR_SCREENNAME_MISSIN_MSG, "OK");
+			else
+				Navigation.PushModalAsync(new Staging ());
 		}
 	}
 }
