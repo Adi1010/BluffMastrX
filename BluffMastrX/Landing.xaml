@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="BluffMastrX.Landing">
+	<ContentPage.Content>
+	   <StackLayout Padding="10,20,0,0">
+	        <Label Text = "BluffMastr" HorizontalOptions = "Center"></Label>
+			<Frame HorizontalOptions="Center" WidthRequest="300" HeightRequest="250" VerticalOptions= "Center" >
+				<StackLayout Padding="20" HorizontalOptions="CenterAndExpand" >
+					<Button Text = "Create Game" WidthRequest="100" TextColor="White" Clicked="NewGame"  BackgroundColor= "#43CD80"></Button>
+					<Label Text = "OR" HorizontalOptions="Center" ></Label>
+					<Button Text = "Join a Game" WidthRequest="100" TextColor="White" Clicked="JoinGame" BackgroundColor="#43CD80"></Button>
+				</StackLayout>
+			</Frame>
+			<TableView Intent="Form" BackgroundColor="White" >
+				<TableSection>
+						<EntryCell x:Name="ScreeNameField" Label="ScreenName" Keyboard="Email" Placeholder="Put on your bluffin' name" XAlign="Center"/>
+				</TableSection>
+			</TableView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
