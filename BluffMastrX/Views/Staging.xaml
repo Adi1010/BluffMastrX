@@ -2,18 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BluffMastrX.Staging">
 	<ContentPage.Content>
 		<StackLayout Padding="10,20,10,10">
-	        <Label Text = "BluffMastr" HorizontalOptions = "CenterAndExpand"></Label>
-			<Frame HorizontalOptions="Center" WidthRequest="300" HeightRequest="250" VerticalOptions= "Center" >
-				<StackLayout HorizontalOptions="CenterAndExpand" >
+	        <Label x:Name="Top" Text="BluffMastr" HorizontalOptions = "CenterAndExpand"></Label>
+			<Frame x:Name="GameCreator" HorizontalOptions="Center">
+				<StackLayout  HorizontalOptions="CenterAndExpand" >
 					<Label Text = "Share the following code with other players" FontSize="Small" HorizontalOptions="Center" ></Label> 
 					<Label Text = "PDF2U" FontAttributes="Italic" HorizontalOptions="Center" ></Label>
 				</StackLayout>
 			</Frame>
-			<TableView Intent="Form" BackgroundColor="White" >
-				<TableSection>
-						
-				</TableSection>
-			</TableView>
+			<Frame x:Name="GamePlayer"	HorizontalOptions="Center" >
+				<StackLayout HorizontalOptions="CenterAndExpand" >
+					<Label Text = "Please enter the game code" FontSize="Small" HorizontalOptions="Center" ></Label> 
+					<Entry x:Name="GameCode" FontAttributes="Italic" ></Entry>
+				</StackLayout>
+			</Frame>
+			<Label Text = "Waiting for more players to join..." FontSize="Small" HorizontalOptions = "CenterAndExpand"></Label>
+			<Frame HorizontalOptions="Center" WidthRequest = "300" HeightRequest="250" VerticalOptions = "Center">
+				<ListView x:Name="UserList" BackgroundColor="White" >
+					
+				</ListView>
+			</Frame>
 			<StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
 					<Button Text = "Leave Game" WidthRequest="100" TextColor="White" Clicked="LeaveGame"  BackgroundColor="Gray" ></Button>
 			</StackLayout>
