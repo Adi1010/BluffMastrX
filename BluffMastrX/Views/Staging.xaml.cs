@@ -22,7 +22,7 @@ namespace BluffMastrX
 
 		void LeaveGame(object sender, EventArgs e)
 		{
-			Navigation.PushModalAsync(new Landing ());
+			Navigation.PopModalAsync();
 		}
 	}
 }
