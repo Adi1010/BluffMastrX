@@ -2,20 +2,21 @@
 <ContentPage 
 xmlns="http://xamarin.com/schemas/2014/forms" 
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-x:Class="BluffMastrX.Landing">
+x:Class="BluffMastrX.Landing"
+xmlns:CS="clr-namespace:BluffMastrX.Util">
 	<ContentPage.Content>
 	   <StackLayout>
-	        <Label x:Name="AppLabel" Text = "BluffMastr" HeightRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="24" FontFamily="MarkerFelt-Thin" BackgroundColor="Red" TextColor="White"></Label>
+	        <Label x:Name="AppLabel" Text = "BluffMastr" HeightRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="24" FontFamily="{x:Static CS:Constants.HEADER_FONT_FAMILIY}" BackgroundColor="Red" TextColor="White"></Label>
 			<Frame HorizontalOptions="Center" WidthRequest="300" HeightRequest="250" VerticalOptions= "Center" >
-				<StackLayout Padding="20" HorizontalOptions="CenterAndExpand" >
-					<Button Text = "Create Game" WidthRequest="100" TextColor="White" Clicked="NewGame"  BackgroundColor= "#43CD80"></Button>
-					<Label Text = "OR" HorizontalOptions="Center" ></Label>
-					<Button Text = "Join a Game" WidthRequest="100" TextColor="White" Clicked="JoinGame" BackgroundColor="#43CD80"></Button>
+				<StackLayout HorizontalOptions="CenterAndExpand" >
+					<Button Text = "Create Game" FontFamily="{x:Static CS:Constants.APP_FONT_FAMILIY}" WidthRequest="120" TextColor="White" Clicked="NewGame"  BackgroundColor= "#43CD80"></Button>
+					<Label Text = "OR" FontFamily="{x:Static CS:Constants.APP_FONT_FAMILIY}" HorizontalOptions="Center" ></Label>
+					<Button Text = "Join a Game" WidthRequest="120" FontFamily="{x:Static CS:Constants.APP_FONT_FAMILIY}" TextColor="White" Clicked="JoinGame" BackgroundColor="#43CD80"></Button>
 				</StackLayout>
 			</Frame>
 			<TableView Intent="Form" BackgroundColor="White" >
-				<TableSection>
-						<EntryCell x:Name="ScreeNameField" Label="ScreenName" Keyboard="Email" Placeholder="Put on your bluffin' name" XAlign="Center"/>
+				<TableSection >
+						<EntryCell x:Name="ScreeNameField" Label="ScreenName" Keyboard="Email"  Placeholder="Put on your bluffin' name" XAlign="Center"/>
 				</TableSection>
 			</TableView>
 		</StackLayout>

@@ -1,6 +1,9 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using XLabs.Ioc;
+using XLabs.Platform.Device;
+using BluffMastrX.Util;
 
 namespace BluffMastrX
 {
@@ -9,6 +12,15 @@ namespace BluffMastrX
 		public App ()
 		{
 			// The root page of your application
+			var container = new SimpleContainer ();
+			container.Register<IDevice> (t => AppleDevice.CurrentDevice);
+			Resolver.SetResolver (container.GetResolver ());
+
+			var device = Resolver.Resolve<IDevice> ();
+			Constants.DEVICE_WIDTH_PX = device.ScreenWidthInches ();
+			Constants.DEVICE_WIDTH_INCHES = device.WidthRequestInInches (Constants.DEVICE_WIDTH_PX);
+
+
 			MainPage = new Landing();
 		}
 

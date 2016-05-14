@@ -13,8 +13,7 @@ namespace BluffMastrX
 		public Landing ()
 		{
 			InitializeComponent ();
-			var device = Resolver.Resolve<IDevice> ();
-			AppLabel.WidthRequest = device.WidthRequestInInches ( device.ScreenWidthInches ());
+			AppLabel.WidthRequest = BluffMastrX.Util.Constants.DEVICE_WIDTH_INCHES;
 
 		}
 

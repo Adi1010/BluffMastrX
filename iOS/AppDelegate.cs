@@ -17,11 +17,6 @@ namespace BluffMastrX.iOS
 		{
 			global::Xamarin.Forms.Forms.Init ();
 
-			var container = new SimpleContainer ();
-			container.Register<IDevice> (t => AppleDevice.CurrentDevice);
-
-			Resolver.SetResolver (container.GetResolver ());
-
 			LoadApplication (new App ());
 
 			return base.FinishedLaunching (app, options);

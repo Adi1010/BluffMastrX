@@ -1,18 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BluffMastrX.Staging">
+<ContentPage 
+xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="BluffMastrX.Staging" 
+xmlns:CS="clr-namespace:BluffMastrX.Util">
 	<ContentPage.Content>
 		<StackLayout Padding="10,20,10,10">
 	        <Label x:Name="Top" Text="BluffMastr" HorizontalOptions = "CenterAndExpand"></Label>
 			<Frame x:Name="GameCreator" HorizontalOptions="Center">
 				<StackLayout  HorizontalOptions="CenterAndExpand" >
-					<Label Text = "Share the following code with other players" FontSize="Small" HorizontalOptions="Center" ></Label> 
-					<Label Text = "PDF2U" FontAttributes="Italic" HorizontalOptions="Center" ></Label>
+					<Label Text = "Share the following code with other players" FontFamily="{x:Static CS:Constants.APP_FONT_FAMILIY}" FontSize="Small" HorizontalOptions="Center" ></Label> 
+					<Label Text = "PDF2U" FontFamily="{x:Static CS:Constants.APP_FONT_FAMILIY}" HorizontalOptions="Center" ></Label>
 				</StackLayout>
 			</Frame>
 			<Frame x:Name="GamePlayer"	HorizontalOptions="Center" >
 				<StackLayout HorizontalOptions="CenterAndExpand" >
-					<Label Text = "Please enter the game code" FontSize="Small" HorizontalOptions="Center" ></Label> 
-					<Entry x:Name="GameCode" FontAttributes="Italic" ></Entry>
+					<Label Text = "Please enter the game code" FontFamily="{x:Static CS:Constants.APP_FONT_FAMILIY}" FontSize="Small" HorizontalOptions="Center" ></Label> 
+					<Entry x:Name="GameCode" FontFamily="{x:Static CS:Constants.APP_FONT_FAMILIY}" ></Entry>
 				</StackLayout>
 			</Frame>
 			<Label Text = "Waiting for more players to join..." FontSize="Small" HorizontalOptions = "CenterAndExpand"></Label>
@@ -22,7 +26,7 @@
 				</ListView>
 			</Frame>
 			<StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
-					<Button Text = "Leave Game" WidthRequest="100" TextColor="White" Clicked="LeaveGame"  BackgroundColor="Gray" ></Button>
+					<Button Text = "Leave Game" WidthRequest="100" TextColor="White" FontFamily="{x:Static CS:Constants.APP_FONT_FAMILIY}" Clicked="LeaveGame"  BackgroundColor="Gray" ></Button>
 			</StackLayout>
 		</StackLayout>
 	</ContentPage.Content>

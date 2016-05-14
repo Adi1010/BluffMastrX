@@ -42,6 +42,13 @@ namespace BluffMastrX.Util
 		public const string SVC_CURRENT_QUESTION = "currentQuestion";
 		public const string SVC_QUESTION_TITLE = "title";
 
+		/* Metrics */
+		public static double DEVICE_WIDTH_INCHES = 2.3006134969;
+		public static double DEVICE_WIDTH_PX = 375;
+
+		/*Fonts*/
+		public static string APP_FONT_FAMILIY = "MarkerFelt-Thin";
+		public static string HEADER_FONT_FAMILIY = "MarkerFelt-Wide";
 	}
 }
 
